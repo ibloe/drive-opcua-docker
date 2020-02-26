@@ -12,11 +12,6 @@ LABEL maintainer="ibloe" \
 #version
 ENV DRIVE_OPC_UA_DOCKER_VERSION 0.0.0.2
 
-
-#copy files
-COPY "./init.d/*" /etc/init.d/ 
-COPY "./drive_opcua/" /home/pi/opc-ua-server/
-
 ENV USER=pi
 ENV PASSWD=raspberry
 
@@ -73,6 +68,9 @@ RUN apt-get update \
  && rm -rf /tmp/* \
  && rm -rf /var/lib/apt/lists/*
 
+#copy files
+COPY "./init.d/*" /etc/init.d/ 
+COPY "./drive_opcua/" /home/pi/opc-ua-server/
 	
 #OPC UA TCP & SSH
 EXPOSE 4840
