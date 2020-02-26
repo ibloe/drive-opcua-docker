@@ -14,7 +14,7 @@ Docker Container with OPC UA server to drive a motor with the NPIX DI DO Module 
 
 ## Access
 1. OPC UA Server 
-	* `opc.tcp://IP:4840
+	* `opc.tcp://IP:4840`
 2. SSH
 	* `IP:22`
 
