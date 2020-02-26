@@ -21,8 +21,9 @@ echo "start python drive application"
 sudo nohup python /home/pi/opc-ua-server/drive.py &
 #sudo python /home/pi/opc-ua-server/drive.py
 echo "starting opc-ua-server"
-sudo chmod +x /home/pi/opc-ua-server/StepMotorOpcServer
-sudo ./opc-ua-server/StepMotorOpcServer
+cd /home/pi/opc-ua-server
+sudo chmod +x StepMotorOpcServer
+sudo ./StepMotorOpcServer
 
 
 
