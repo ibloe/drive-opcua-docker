@@ -21,7 +21,7 @@ echo "start python drive application"
 sudo nohup python /home/pi/opc-ua-server/drive.py &
 #sudo python /home/pi/opc-ua-server/drive.py
 echo "starting opc-ua-server"
-sudo ./home/pi/opc-ua-server/drive_opcua
+sudo ./home/pi/opc-ua-server/drive-opcua-server
 
 
 
