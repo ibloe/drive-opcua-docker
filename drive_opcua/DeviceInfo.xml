@@ -1,0 +1,142 @@
+<!---Serveroptions--->
+<ServerOptions>
+  <!---GDS registration Url--->
+  <GdsUrl>opc.tcp://10.11.5.92:58810</GdsUrl>
+	<ApplicationUri>urn:flexsiPro:HilscherPnP</ApplicationUri>
+  <ApplicationName>flexsiProPnP_DemoServer</ApplicationName>
+  <ProductUri>https://www.hilscher.com/OPCservers/flexsiPro/67339</ProductUri>
+  <!---PubSub over Layer 2 Ethernet, if set to 0 Pub Sub is Layer 3 IP--->
+  <PubSubEthernet>1</PubSubEthernet>
+	<!---PubSub PublishingInterval--->
+	<PublishingInterval>1000.0</PublishingInterval>
+	<!---TTL for PubSub Messages--->
+	<TTL>3</TTL>
+	<!---Enable VL6180X Time of flight Service--->
+	<TofSensor>0</TofSensor>
+  <!---OPC Ua Server Port--->
+	<Port>4840</Port>
+</ServerOptions>
+<!---Device Information--->
+<DeviceInformation>
+    <Description>OPCUA-Demoserver</Description>
+    <Manufacturer>Hilscher</Manufacturer>
+    <Model>netPi</Model>
+    <ProductId>54235.47</ProductId>
+    <SerialNumber>10054</SerialNumber>
+</DeviceInformation>
+<ConnectionRequest0>
+    <Active>false</Active>
+    <DestinationAddress>c2:d9:d8:53:b2:6f</DestinationAddress>
+    <ErrorCode>1</ErrorCode>
+    <SourceAddress>b8:27:eb:3b:17:f9</SourceAddress>
+	<Latency>100000000</Latency>
+</ConnectionRequest0>
+<ConnectionRequest1>
+    <Active>false</Active>
+    <DestinationAddress>71:f4:31:4b:3a:80</DestinationAddress>
+    <ErrorCode>1</ErrorCode>
+    <SourceAddress>51:cb:5b:ee:3c:25</SourceAddress>
+	<Latency>12345678910111213</Latency>
+</ConnectionRequest1>
+<!---Listener Information--->
+<Listener0>
+    <MacAddress>01:cd:ef:gh:12:34</MacAddress>
+	<UniqueId>1</UniqueId>
+	<MaxLatency>50000000</MaxLatency>
+	<NumSeamlessTrees>0</NumSeamlessTrees>
+</Listener0>
+<Listener1>
+    <MacAddress>02:cd:ef:gh:12:34</MacAddress>
+	<UniqueId>2</UniqueId>
+	<MaxLatency>50000001</MaxLatency>
+	<NumSeamlessTrees>0</NumSeamlessTrees>
+</Listener1>
+<Listener2>
+    <MacAddress>03:cd:ef:gh:12:34</MacAddress>
+	<UniqueId>3</UniqueId>
+	<MaxLatency>50000002</MaxLatency>
+	<NumSeamlessTrees>0</NumSeamlessTrees>
+</Listener2>
+<!---Talker Information--->
+<Talker0>
+	<!---DataFrameSpecification/IPv4Touple--->	
+    <DestinationIpAddress>192.168.1.100</DestinationIpAddress>
+	<DestinationPort>1</DestinationPort> <!---UINT16 --->
+	<Dscp>64</Dscp> <!---Byte --->
+	<Protocol>17</Protocol> <!---UINT16 --->
+	<SourcePort>47316</SourcePort> <!---UINT16 --->
+	<!---StreamRank--->	
+	<Rank>1</Rank> <!---Byte ---> 
+	<!---TrafficSpecification/Interval--->
+	<Denominator>1</Denominator> <!---UINT32 --->
+	<Numerator>1</Numerator> <!---INT32 --->
+	<!---TrafficSpecification/TSpecTimeAware--->
+	<EarliestTransmitOffset>1</EarliestTransmitOffset> <!---UINT32 --->
+	<Jitter>2</Jitter> <!---UINT32 --->
+	<LatestTransmitOffset>3</LatestTransmitOffset> <!---UINT32 --->
+	<!---TrafficSpecification---> 
+	<MaxFrameSize>61</MaxFrameSize> <!---UINT16 ---> 
+	<MaxFramesPerInterval>1</MaxFramesPerInterval> <!---UINT16 --->
+	<TransmissionSelection>1</TransmissionSelection> <!---UINT32 --->
+	<!---UserToNetworkRequirements--->	 
+	<MaxLatency>50000002</MaxLatency> <!---UINT32 --->
+	<NumSeamlessTrees>0</NumSeamlessTrees> <!---Byte --->
+</Talker0>
+<Talker1>
+	<!---DataFrameSpecification/IPv4Touple--->	
+    <DestinationIpAddress>192.168.1.101</DestinationIpAddress>
+	<DestinationPort>1</DestinationPort> <!---UINT16 --->
+	<Dscp>64</Dscp> <!---Byte --->
+	<Protocol>17</Protocol> <!---UINT16 --->
+	<SourcePort>47316</SourcePort> <!---UINT16 --->
+	<!---StreamRank--->	
+	<Rank>1</Rank> <!---Byte ---> 
+	<!---TrafficSpecification/Interval--->
+	<Denominator>1</Denominator> <!---UINT32 --->
+	<Numerator>1</Numerator> <!---INT32 --->
+	<!---TrafficSpecification/TSpecTimeAware--->
+	<EarliestTransmitOffset>1</EarliestTransmitOffset> <!---UINT32 --->
+	<Jitter>2</Jitter> <!---UINT32 --->
+	<LatestTransmitOffset>3</LatestTransmitOffset> <!---UINT32 --->
+	<!---TrafficSpecification---> 
+	<MaxFrameSize>61</MaxFrameSize> <!---UINT16 ---> 
+	<MaxFramesPerInterval>1</MaxFramesPerInterval> <!---UINT16 --->
+	<TransmissionSelection>1</TransmissionSelection> <!---UINT32 --->
+	<!---UserToNetworkRequirements--->	 
+	<MaxLatency>50000002</MaxLatency> <!---UINT32 --->
+	<NumSeamlessTrees>0</NumSeamlessTrees> <!---Byte --->
+	<!---PubSub PublishingInterval--->
+	<PublishingInterval>500</PublishingInterval>
+	<!---TTL--->
+	<TTL>3</TTL>
+</Talker1>
+<Talker2>
+	<!---DataFrameSpecification/IPv4Touple--->	
+    <DestinationIpAddress>192.168.1.102</DestinationIpAddress>
+	<DestinationPort>1</DestinationPort> <!---UINT16 --->
+	<Dscp>64</Dscp> <!---Byte --->
+	<Protocol>17</Protocol> <!---UINT16 --->
+	<SourcePort>47316</SourcePort> <!---UINT16 --->
+	<!---StreamRank--->	
+	<Rank>1</Rank> <!---Byte ---> 
+	<!---TrafficSpecification/Interval--->
+	<Denominator>1</Denominator> <!---UINT32 --->
+	<Numerator>1</Numerator> <!---INT32 --->
+	<!---TrafficSpecification/TSpecTimeAware--->
+	<EarliestTransmitOffset>1</EarliestTransmitOffset> <!---UINT32 --->
+	<Jitter>2</Jitter> <!---UINT32 --->
+	<LatestTransmitOffset>3</LatestTransmitOffset> <!---UINT32 --->
+	<!---TrafficSpecification---> 
+	<MaxFrameSize>61</MaxFrameSize> <!---UINT16 ---> 
+	<MaxFramesPerInterval>1</MaxFramesPerInterval> <!---UINT16 --->
+	<TransmissionSelection>1</TransmissionSelection> <!---UINT32 --->
+	<!---UserToNetworkRequirements--->	 
+	<MaxLatency>50000002</MaxLatency> <!---UINT32 --->
+	<NumSeamlessTrees>0</NumSeamlessTrees> <!---Byte --->
+	<!---PubSub PublishingInterval--->
+	<PublishingInterval>500</PublishingInterval>
+	<!---TTL--->
+	<TTL>3</TTL>
+</Talker2>
+
+
