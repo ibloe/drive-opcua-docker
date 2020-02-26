@@ -12,10 +12,14 @@ Docker Container with OPC UA server to drive a motor with the NPIX DI DO Module 
 
 3. Press the button **Actions > Start container**
 
+## Access
+1. OPC UA Server 
+	* `opc.tcp://IP:4840
+2. SSH
+	* `IP:22`
+
 ## Hardware 
 Npix IO Module PinOut, drive IOs with 24V:
-
-
 
 | | | | | | |
 |:-:|:-:|:-:|:-:|:-:|:-:|
