@@ -35,17 +35,25 @@ RUN apt-get update \
  && adduser $USER spi \
  && adduser $USER gpio \
  && apt-get install -y --no-install-recommends \
+ 				build-essential \
+				network-manager \
                 less \
                 kmod \
                 nano \
                 net-tools \
                 ifupdown \
                 iputils-ping \
+				i2c-tools \
                 usbutils \
-                build-essential \
+				git \
                 python \
                 apt-utils \
+				dialog \
+				curl build-essential \
+				vim-common \
+				vim-tiny \
                 gdb \
+				psmisc \
                 dhcpcd5 \
                 ssh \
                 python-rpi.gpio \
@@ -63,7 +71,6 @@ RUN apt-get update \
  && mkdir /etc/firmware \
  && curl -o /etc/firmware/BCM43430A1.hcd -L https://github.com/OpenELEC/misc-firmware/raw/master/firmware/brcm/BCM43430A1.hcd \
  && wget https://raw.githubusercontent.com/raspberrypi/firmware/1.20180417/opt/vc/bin/vcmailbox -O /opt/vc/bin/vcmailbox \
- && apt-get remove git \
  && apt-get autoremove \
  && rm -rf /tmp/* \
  && rm -rf /var/lib/apt/lists/*
@@ -71,6 +78,8 @@ RUN apt-get update \
 #copy files
 COPY "./init.d/*" /etc/init.d/ 
 COPY "./drive_opcua/" /home/pi/opc-ua-server/
+
+RUN sudo chmod -R g+rwx /home/pi/opc-ua-server/
 	
 #OPC UA TCP & SSH
 EXPOSE 4840
