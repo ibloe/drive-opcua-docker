@@ -11,7 +11,7 @@ term_handler() {
 }
 
 # on callback, stop all started processes in term_handler
-trap 'kill ${!}; term_handler' SIGINT SIGKILL SIGTERM SIGQUIT SIGTSTP SIGSTOP SIGHUP
+trap 'kill ${!}; term_handler' INT KILL TERM QUIT TSTP STOP HUP
 
 # run applications in the background
 echo "starting ssh ..."
@@ -21,11 +21,7 @@ echo "start python drive application"
 sudo nohup python /home/pi/opc-ua-server/drive.py &
 #sudo python /home/pi/opc-ua-server/drive.py
 echo "starting opc-ua-server"
-cd /home/pi/opc-ua-server
-sudo chmod +x StepMotorOpcServer
-sudo ./StepMotorOpcServer
-
-
+/home/pi/opc-ua-server/StepMotorOpcServer
 
 # wait forever not to exit the container
 while true
